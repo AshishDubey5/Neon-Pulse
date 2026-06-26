@@ -6,18 +6,18 @@
 
 (function () {
   const LINKS = [
-    { href: "01_index.html",    label: "HOME"     },
-    { href: "02_music.html",    label: "MUSIC"    },
-    { href: "03_download.html", label: "DOWNLOAD" },
-    { href: "04_contacts.html", label: "CONTACTS" },
-    { href: "05_feedback.html", label: "FEEDBACK" },
+    { href: "index.html",    label: "HOME"     },
+    { href: "music.html",    label: "MUSIC"    },
+    { href: "download.html", label: "DOWNLOAD" },
+    { href: "contacts.html", label: "CONTACTS" },
+    { href: "feedback.html", label: "FEEDBACK" },
   ];
 
   function init() {
 
     /* ── Detect active page ── */
     const fullPath    = window.location.href;
-    const currentFile = fullPath.split("/").pop().split("?")[0].split("#")[0] || "01_index.html";
+    const currentFile = fullPath.split("/").pop().split("?")[0].split("#")[0] || "index.html";
 
     console.log("[nav.js] current file detected:", currentFile); // debug line — remove later
 
@@ -48,7 +48,7 @@
 <nav class="fixed top-0 w-full bg-black bg-opacity-50 backdrop-blur-lg border-b border-purple-500 border-opacity-30 z-40" aria-label="Main navigation">
   <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
 
-    <a href="01_index.html"
+    <a href="index.html"
        class="text-3xl font-black text-white cursor-pointer hover:text-purple-400 transition-colors"
        style="font-family:'Orbitron',monospace; text-shadow:0 0 20px rgba(147,51,234,0.6)">
       NEON PULSE
