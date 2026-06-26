@@ -29,52 +29,6 @@ body {
 
 /* ================= MOBILE MENU ================= */
 
-.hamburger {
-    display: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 28px;
-    cursor: pointer;
-}
-
-.mobile-menu {
-    display: none;
-
-    position: fixed;
-    top: var(--nav-h);
-    left: 0;
-
-    width: 100%;
-
-    background: rgba(0,0,0,.95);
-    backdrop-filter: blur(15px);
-
-    flex-direction: column;
-    z-index: 999;
-}
-
-.mobile-menu.open {
-    display: flex;
-}
-
-.mobile-menu a {
-    padding: 18px 25px;
-    text-decoration: none;
-    color: white;
-
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 1px;
-
-    border-bottom: 1px solid rgba(255,255,255,.05);
-}
-
-.mobile-menu a:hover,
-.mobile-menu a.active {
-    color: var(--accent);
-    background: rgba(192,132,252,.1);
-} 
 
 /* ================= PAGE ================= */
 
