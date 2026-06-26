@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neon Pulse - Contacts</title>
+
+  <link rel="stylesheet" href="contacts_style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="contacts_style.css">
+  <script src="nav_bar.js"></script>  <!-- ← this is all you need -->
+
+
+  </head>
+<body>
+
+  <div class="page-wrap">
+
+    <!-- HERO -->
+    <div class="page-hero">
+      <h1>CONTACTS</h1>
+      <p>Get in touch · Reach out · Connect</p>
+    </div>
+
+    <!-- CONTACT CARDS -->
+    <div class="section-label">Reach us directly</div>
+    <div class="contact-grid">
+
+      <div class="contact-card">
+        <div class="card-icon">📧</div>
+        <div class="card-label">Email</div>
+        <a href="mailto:hello@neonpulse.fm" class="card-value">hello@neonpulse.fm</a>
+        <div class="card-desc">General enquiries &amp; partnerships</div>
+      </div>
+
+      <div class="contact-card">
+        <div class="card-icon">🎛️</div>
+        <div class="card-label">Submissions</div>
+        <a href="mailto:music@neonpulse.fm" class="card-value">music@neonpulse.fm</a>
+        <div class="card-desc">Send us your tracks to be featured</div>
+      </div>
+
+      <div class="contact-card">
+        <div class="card-icon">💼</div>
+        <div class="card-label">Business</div>
+        <a href="mailto:business@neonpulse.fm" class="card-value">business@neonpulse.fm</a>
+        <div class="card-desc">Sponsorships, collabs &amp; licensing</div>
+      </div>
+
+      <div class="contact-card">
+        <div class="card-icon">📍</div>
+        <div class="card-label">Location</div>
+        <span class="card-value" style="cursor:default; color: rgba(255,255,255,0.8);">Mumbai, India</span>
+        <div class="card-desc">Broadcasting from the underground</div>
+      </div>
+
+    </div>
+
+    <!-- SOCIAL -->
+    <div class="section-label">Find us on social</div>
+    <div class="social-row">
+      <a href="#" class="social-btn" onclick="copyHandle('@neonpulse', event)">
+        <span class="icon">𝕏</span> @neonpulse
+      </a>
+      <a href="#" class="social-btn" onclick="copyHandle('@neonpulse.fm', event)">
+        <span class="icon">📸</span> Instagram
+      </a>
+      <a href="#" class="social-btn" onclick="copyHandle('Neon Pulse', event)">
+        <span class="icon">🎵</span> TikTok
+      </a>
+      <a href="#" class="social-btn" onclick="copyHandle('discord.gg/neonpulse', event)">
+        <span class="icon">💬</span> Discord
+      </a>
+      <a href="#" class="social-btn" onclick="copyHandle('Neon Pulse', event)">
+        <span class="icon">▶️</span> YouTube
+      </a>
+      <a href="#" class="social-btn" onclick="copyHandle('Neon Pulse', event)">
+        <span class="icon">🎧</span> SoundCloud
+      </a>
+    </div>
+
+    <!-- HOURS -->
+    <div class="section-label">Response hours</div>
+    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(167,139,250,0.2); border-radius: 20px; padding: 28px 28px; margin-bottom: 50px;">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0;">
+        <div style="padding: 12px 0; border-bottom: 1px solid rgba(167,139,250,0.1); font-size: 13px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px;">Monday – Friday</div>
+        <div style="padding: 12px 0; border-bottom: 1px solid rgba(167,139,250,0.1); font-size: 14px; font-weight: bold; color: var(--accent); text-align: right;">10:00 AM – 8:00 PM</div>
+        <div style="padding: 12px 0; border-bottom: 1px solid rgba(167,139,250,0.1); font-size: 13px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px;">Saturday</div>
+        <div style="padding: 12px 0; border-bottom: 1px solid rgba(167,139,250,0.1); font-size: 14px; font-weight: bold; color: var(--accent); text-align: right;">12:00 PM – 6:00 PM</div>
+        <div style="padding: 12px 0; font-size: 13px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px;">Sunday</div>
+        <div style="padding: 12px 0; font-size: 14px; font-weight: bold; color: rgba(255,255,255,0.35); text-align: right;">Offline — vibing</div>
+      </div>
+    </div>
+
+    <!-- MAP -->
+    <div class="section-label">Where we are</div>
+    <div class="map-box">
+      <div class="map-icon">🗺️</div>
+      <div>Mumbai, Maharashtra, India</div>
+      <div style="font-size: 11px; margin-top: 4px; opacity: 0.5;">Embed your map here</div>
+    </div>
+
+  </div>
+
+  <div id="toast"></div>
+
+  <script>
+    function toggleMenu() {
+      const m = document.getElementById('mobileMenu');
+      const b = document.getElementById('menuBtn');
+      m.classList.toggle('open');
+      b.textContent = m.classList.contains('open') ? '✕' : '☰';
+    }
+
+    function copyHandle(text, e) {
+      e.preventDefault();
+      navigator.clipboard.writeText(text).then(() => showToast('📋 Copied: ' + text));
+    }
+
+    let toastTimer;
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.textContent = msg; t.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => t.classList.remove('show'), 2400);
+    }
+  </script>
+</body>
+</html>
