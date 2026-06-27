@@ -1,17 +1,29 @@
-    :root {
-      --bg-1: #000000;
-      --bg-2: #581c87;
-      --accent: #a78bfa;
-      --accent-glow: rgba(167,139,250,0.35);
-      --nav-h: 70px;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, var(--bg-1), var(--bg-2), var(--bg-1));
-      min-height: 100vh;
-      color: white;
-    }
+:root {
+    --bg-1: #000000;
+    --bg-2: #581c87;
+    --accent: #c084fc;
+    --accent-glow: rgba(192,132,252,0.35);
+    --nav-h: 70px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    min-height: 100vh;
+    background: linear-gradient(
+        to bottom,
+        var(--bg-1),
+        #14001f,
+        var(--bg-2),
+        var(--bg-1)
+    );
+}
 
         /* ── Canvas visualizer background ── */
         #bgCanvas {
