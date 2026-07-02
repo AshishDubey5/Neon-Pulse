@@ -19,7 +19,7 @@
     <meta property="og:title" content="Neon Pulse – Free Downloadable Music & Sound Effects">
     <meta property="og:description"
         content="Free, royalty-free sound effects and music platform. Stream lo-fi, ambient, and relaxing tracks — download instantly or suggest what drops next.">
-    <meta property="og:image" content="https://neonpulsemusics.netlify.app/og-image.png">
+    <meta property="og:image" content="https://neonpulsemusics.netlify.app/assets/images/og-image.png">
     <meta property="og:url" content="https://neonpulsemusics.netlify.app/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Neon Pulse">
@@ -29,7 +29,7 @@
     <meta name="twitter:title" content="Neon Pulse – Free Music & Sound Effects">
     <meta name="twitter:description"
         content="Stream and download free, royalty-free sound effects, lo-fi, ambient, and EDM tracks. New drops every week.">
-    <meta name="twitter:image" content="https://neonpulsemusics.netlify.app/og-image.png">
+    <meta name="twitter:image" content="https://neonpulsemusics.netlify.app/assets/images/og-image.png">
 
     <!-- ═══ SEO: Structured Data (JSON-LD) ═══ -->
     <script type="application/ld+json">
@@ -52,11 +52,11 @@
 
     <!-- js => nav bar -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="nav_bar.js"></script> <!-- ← this is all you need -->
+    <script src="js/nav_bar.js"></script> <!-- ← this is all you need -->
 
     <!-- other files -->
-    <link rel="stylesheet" href="index_styles.css">
-    <link rel="stylesheet" href="index_social.css">
+    <link rel="stylesheet" href="css/index_styles.css">
+    <link rel="stylesheet" href="css/index_social.css">
     <!-- fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@400;500;600&display=swap"
@@ -171,7 +171,7 @@
                     <!-- <audio id="audioPlayer" src="midnight-cascade.mp3" preload="metadata"></audio> -->
 
                     <audio id="audioPlayer" preload="auto">
-                        <source src="midnight-cascade.mp3" type="audio/mpeg">
+                        <source src="assets/audio/midnight-cascade.mp3" type="audio/mpeg">
                         Your browser does not support audio.
                     </audio>
 
@@ -321,55 +321,41 @@
              NEWSLETTER
         ═══════════════════════════════════════ -->
         <section class="relative z-10 py-24 px-6" aria-label="Newsletter signup">
-    <div class="max-w-xl mx-auto reveal">
-        <div class="newsletter-section p-10 text-center">
+            <div class="max-w-xl mx-auto reveal">
+                <div class="newsletter-section p-10 text-center">
 
-            <p class="section-label mb-3">Stay in the Loop</p>
+                    <p class="section-label mb-3">Stay in the Loop</p>
 
-            <h2 class="section-title mb-3">
-                New drops, first.
-            </h2>
+                    <h2 class="section-title mb-3">
+                        New drops, first.
+                    </h2>
 
-            <p class="text-gray-500 text-sm mb-8">
-                No spam. Just a heads-up when something new hits.
-            </p>
+                    <p class="text-gray-500 text-sm mb-8">
+                        No spam. Just a heads-up when something new hits.
+                    </p>
 
-            <form
-                action="https://formspree.io/f/mvzjbzvq"
-                method="POST"
-                class="flex flex-col sm:flex-row gap-3"
-            >
-                <label for="emailInput" class="sr-only">
-                    Your email address
-                </label>
+                    <form action="https://formspree.io/f/mvzjbzvq" method="POST"
+                        class="flex flex-col sm:flex-row gap-3">
+                        <label for="emailInput" class="sr-only">
+                            Your email address
+                        </label>
 
-                <input
-                    type="email"
-                    id="emailInput"
-                    name="email"
-                    class="email-input"
-                    placeholder="neon.pulse206@gmail.com"
-                    autocomplete="email"
-                    required
-                >
+                        <input type="email" id="emailInput" name="email" class="email-input"
+                            placeholder="neon.pulse206@gmail.com" autocomplete="email" required>
 
-                <button
-                    type="submit"
-                    class="btn-primary text-white whitespace-nowrap"
-                    style="padding:0.85rem 1.5rem;"
-                >
-                    NOTIFY ME
-                </button>
-            </form>
+                        <button type="submit" class="btn-primary text-white whitespace-nowrap"
+                            style="padding:0.85rem 1.5rem;">
+                            NOTIFY ME
+                        </button>
+                    </form>
 
-            <p id="subscribeMsg"
-               class="text-green-400 text-sm mt-4 hidden">
-                ✓ You're on the list!
-            </p>
+                    <p id="subscribeMsg" class="text-green-400 text-sm mt-4 hidden">
+                        ✓ You're on the list!
+                    </p>
 
-        </div>
-    </div>
-</section>
+                </div>
+            </div>
+        </section>
 
     </main>
 
@@ -432,7 +418,7 @@
     <!-- ═══════════════════════════════════════
          SCRIPTS
     ═══════════════════════════════════════ -->
-    <script src="index_script.js"></script>
+    <script src="js/index_script.js"></script>
 
     <!-- for player -->
     <script>
@@ -603,9 +589,5 @@
             });
     </script>
 </body>
-<<<<<<< HEAD
-</html>
-=======
 
 </html>
->>>>>>> 04873a1 ( removed fake details)
