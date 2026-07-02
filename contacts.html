@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Neon Pulse - Contacts</title>
 
-  
+
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
 
   <!-- js => nav bar -->
-  <script src="nav_bar.js"></script>  <!-- ← this is all you need -->
+  <script src="nav_bar.js"></script> <!-- ← this is all you need -->
 
   <!-- other files -->
   <link rel="stylesheet" href="contacts_style.css">
   <script src="contacts_script.js" defer> </script>
-  
+  <link rel="stylesheet" href="index_social.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 
-  </head>
+
+</head>
+
 <body>
 
   <div class="page-wrap">
@@ -30,87 +35,113 @@
     </div>
 
     <!-- CONTACT CARDS -->
+    <!-- CONTACT CARDS -->
     <div class="section-label">Reach us directly</div>
     <div class="contact-grid">
 
       <div class="contact-card">
         <div class="card-icon">📧</div>
         <div class="card-label">Email</div>
-        <a href="mailto:hello@neonpulse.fm" class="card-value">hello@neonpulse.fm</a>
+        <a href="mailto:neon.pulse206@gmail.com" class="card-value">neon.pulse206@gmail.com</a>
         <div class="card-desc">General enquiries &amp; partnerships</div>
       </div>
 
       <div class="contact-card">
         <div class="card-icon">🎛️</div>
         <div class="card-label">Submissions</div>
-        <a href="mailto:music@neonpulse.fm" class="card-value">music@neonpulse.fm</a>
+        <a href="mailto:neon.pulse206@gmail.com?subject=Track Submission" class="card-value">neon.pulse206@gmail.com</a>
         <div class="card-desc">Send us your tracks to be featured</div>
       </div>
 
       <div class="contact-card">
         <div class="card-icon">💼</div>
         <div class="card-label">Business</div>
-        <a href="mailto:business@neonpulse.fm" class="card-value">business@neonpulse.fm</a>
+        <a href="mailto:neon.pulse206@gmail.com?subject=Business Inquiry" class="card-value">neon.pulse206@gmail.com</a>
         <div class="card-desc">Sponsorships, collabs &amp; licensing</div>
       </div>
 
       <div class="contact-card">
         <div class="card-icon">📍</div>
         <div class="card-label">Location</div>
-        <span class="card-value" style="cursor:default; color: rgba(255,255,255,0.8);">Mumbai, India</span>
+        <span class="card-value" style="cursor:default; color: rgba(255,255,255,0.8);">Ghaziabad, Uttar pradesh,
+          India</span>
         <div class="card-desc">Broadcasting from the underground</div>
       </div>
 
     </div>
 
     <!-- SOCIAL -->
-    <div class="section-label">Find us on social</div>
-    <div class="social-row">
-      <a href="#" class="social-btn" onclick="copyHandle('@neonpulse', event)">
-        <span class="icon">𝕏</span> @neonpulse
-      </a>
-      <a href="#" class="social-btn" onclick="copyHandle('@neonpulse.fm', event)">
-        <span class="icon">📸</span> Instagram
-      </a>
-      <a href="#" class="social-btn" onclick="copyHandle('Neon Pulse', event)">
-        <span class="icon">🎵</span> TikTok
-      </a>
-      <a href="#" class="social-btn" onclick="copyHandle('discord.gg/neonpulse', event)">
-        <span class="icon">💬</span> Discord
-      </a>
-      <a href="#" class="social-btn" onclick="copyHandle('Neon Pulse', event)">
-        <span class="icon">▶️</span> YouTube
-      </a>
-      <a href="#" class="social-btn" onclick="copyHandle('Neon Pulse', event)">
-        <span class="icon">🎧</span> SoundCloud
-      </a>
-    </div>
+    <section class="social-section">
+
+      <h2>Follow Us</h2>
+
+      <div class="social-icons">
+
+        <a href="https://www.instagram.com/neon.pulse5/" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://www.facebook.com/profile.php?id=61591609371737" target="_blank">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <a href="https://x.com/NeonPulse5" target="_blank">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+
+        <a href="https://www.youtube.com/@NeonPulse-5" target="_blank"> <!--will upload-->
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/neon-pulse-2a6b65419/" target="_blank">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+
+      </div>
+
+    </section>
 
     <!-- HOURS -->
     <div class="section-label">Response hours</div>
-    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(167,139,250,0.2); border-radius: 20px; padding: 28px 28px; margin-bottom: 50px;">
+    <div
+      style="background: rgba(255,255,255,0.05); border: 1px solid rgba(167,139,250,0.2); border-radius: 20px; padding: 28px 28px; margin-bottom: 50px;">
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0;">
-        <div style="padding: 12px 0; border-bottom: 1px solid rgba(167,139,250,0.1); font-size: 13px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px;">Monday – Friday</div>
-        <div style="padding: 12px 0; border-bottom: 1px solid rgba(167,139,250,0.1); font-size: 14px; font-weight: bold; color: var(--accent); text-align: right;">10:00 AM – 8:00 PM</div>
-        <div style="padding: 12px 0; border-bottom: 1px solid rgba(167,139,250,0.1); font-size: 13px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px;">Saturday</div>
-        <div style="padding: 12px 0; border-bottom: 1px solid rgba(167,139,250,0.1); font-size: 14px; font-weight: bold; color: var(--accent); text-align: right;">12:00 PM – 6:00 PM</div>
-        <div style="padding: 12px 0; font-size: 13px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px;">Sunday</div>
-        <div style="padding: 12px 0; font-size: 14px; font-weight: bold; color: rgba(255,255,255,0.35); text-align: right;">Offline — vibing</div>
+        <div
+          style="padding: 12px 0; border-bottom: 1px solid rgba(167,139,250,0.1); font-size: 13px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px;">
+          Monday – Friday</div>
+        <div
+          style="padding: 12px 0; border-bottom: 1px solid rgba(167,139,250,0.1); font-size: 14px; font-weight: bold; color: var(--accent); text-align: right;">
+          10:00 AM – 8:00 PM</div>
+        <div
+          style="padding: 12px 0; border-bottom: 1px solid rgba(167,139,250,0.1); font-size: 13px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px;">
+          Saturday</div>
+        <div
+          style="padding: 12px 0; border-bottom: 1px solid rgba(167,139,250,0.1); font-size: 14px; font-weight: bold; color: var(--accent); text-align: right;">
+          12:00 PM – 6:00 PM</div>
+        <div
+          style="padding: 12px 0; font-size: 13px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px;">
+          Sunday</div>
+        <div
+          style="padding: 12px 0; font-size: 14px; font-weight: bold; color: rgba(255,255,255,0.35); text-align: right;">
+          Offline — vibing</div>
       </div>
     </div>
 
     <!-- MAP -->
     <div class="section-label">Where we are</div>
     <div class="map-box">
-      <div class="map-icon">🗺️</div>
-      <div>Mumbai, Maharashtra, India</div>
-      <div style="font-size: 11px; margin-top: 4px; opacity: 0.5;">Embed your map here</div>
+      <iframe src="https://www.google.com/maps?q=28.7538,77.4993&output=embed" width="100%" height="280"
+        style="border:0; border-radius: 14px;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade" title="Neon Pulse location">
+      </iframe>
+      <div style="font-size: 11px; margin-top: 8px; opacity: 0.5; text-align:center;">Ghaziabad, Delhi NCR, India</div>
     </div>
 
   </div>
 
   <div id="toast"></div>
 
-  
+
 </body>
+
 </html>

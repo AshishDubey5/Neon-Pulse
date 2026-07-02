@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Neon Pulse - Feedback</title>
-  
-  <link rel="stylesheet" href="feedback_style.css">
-   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  
+
+
+
   <!-- js => nav bar -->
-  <script src="nav_bar.js"></script>  <!-- ← this is all you need -->
-  
+  <script src="nav_bar.js"></script> <!-- ← this is all you need -->
+
   <!-- other files -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="feedback_style.css">
   <script src="feedback_script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
 
 
 
 </head>
+
 <body>
 
 
@@ -31,12 +34,19 @@
     </div>
 
     <!-- FORM -->
-    <div id="formSection">
+    <form id="feedbackForm" action="https://formspree.io/f/xnjkgegg" method="POST">
+      <input type="hidden" name="rating" id="ratingValue">
+      <input type="hidden" name="feedbackType" id="feedbackType" value="General">
+
+
+
+
 
       <!-- RATING -->
       <div class="section-label">How's your experience?</div>
       <div class="rating-row" id="ratingRow">
-        <button class="rating-btn" onclick="selectRating(this, 'terrible')"><span class="emoji">😤</span>Terrible</button>
+        <button class="rating-btn" onclick="selectRating(this, 'terrible')"><span
+            class="emoji">😤</span>Terrible</button>
         <button class="rating-btn" onclick="selectRating(this, 'bad')"><span class="emoji">😕</span>Bad</button>
         <button class="rating-btn" onclick="selectRating(this, 'okay')"><span class="emoji">😐</span>Okay</button>
         <button class="rating-btn" onclick="selectRating(this, 'good')"><span class="emoji">😊</span>Good</button>
@@ -61,33 +71,38 @@
         <!-- NAME -->
         <div class="field">
           <label>Your name <span style="color: rgba(255,255,255,0.2); font-size:10px;">(optional)</span></label>
-          <input type="text" id="nameField" placeholder="e.g. Alex Rivera" maxlength="60" />
+          <input type="text" id="nameField" name="name" placeholder="e.g. Alex Rivera">
         </div>
 
         <!-- EMAIL -->
         <div class="field">
-          <label>Email <span style="color: rgba(255,255,255,0.2); font-size:10px;">(optional · for follow-up)</span></label>
-          <input type="email" id="emailField" placeholder="you@example.com" />
+          <label>Email <span style="color: rgba(255,255,255,0.2); font-size:10px;">(optional · for
+              follow-up)</span></label>
+          <input type="email" id="emailField" name="email" placeholder="you@example.com">
         </div>
 
         <!-- MESSAGE -->
         <div class="field">
           <label>Your message <span style="color: #ef4444;">*</span></label>
-          <textarea id="msgField" rows="5" placeholder="Tell us what you think, what you'd change, or what you love..." maxlength="1000" oninput="updateCount()"></textarea>
+          <textarea id="msgField" rows="5" name="message"
+            placeholder="Tell us what you think, what you'd change, or what you love..." maxlength="1000"
+            oninput="updateCount()"></textarea>
           <div class="char-count" id="charCount">0 / 1000</div>
         </div>
 
         <!-- TRACK SUGGESTION -->
         <div class="field">
-          <label>Suggest a track or artist <span style="color: rgba(255,255,255,0.2); font-size:10px;">(optional)</span></label>
-          <input type="text" id="trackField" placeholder="e.g. Fred again.. – Delilah (pull me out of this)" maxlength="100" />
+          <label>Suggest a track or artist <span
+              style="color: rgba(255,255,255,0.2); font-size:10px;">(optional)</span></label>
+          <input type="text" id="trackField" name="trackSuggestion"
+            placeholder="e.g. Fred again.. – Delilah (pull me out of this)" maxlength="100" />
         </div>
 
         <!-- HOW DID YOU HEAR -->
         <div class="field">
           <label>How did you find Neon Pulse?</label>
           <div style="position: relative;">
-            <select id="sourceField">
+            <select id="sourceField" name="source">
               <option value="" disabled selected>Select one…</option>
               <option>Word of mouth</option>
               <option>Social media</option>
@@ -97,28 +112,34 @@
               <option>YouTube / Shorts</option>
               <option>Other</option>
             </select>
-            <span style="position:absolute;right:14px;top:50%;transform:translateY(-50%);pointer-events:none;color:var(--accent);font-size:12px;">▾</span>
+            <span
+              style="position:absolute;right:14px;top:50%;transform:translateY(-50%);pointer-events:none;color:var(--accent);font-size:12px;">▾</span>
           </div>
         </div>
 
         <!-- SUBMIT -->
-        <button class="submit-btn" id="submitBtn" onclick="submitFeedback()">SEND FEEDBACK</button>
+        <button type="submit" class="submit-btn" id="submitBtn">
+          SEND FEEDBACK
+        </button>
 
       </div><!-- /form-card -->
-    </div><!-- /formSection -->
+    </form>
+  </div><!-- /formSection -->
 
-    <!-- SUCCESS -->
-    <div class="success-panel" id="successPanel">
-      <div class="success-icon">🎉</div>
-      <h2>THANK YOU!</h2>
-      <p>Your feedback has been received.<br>We read every message and genuinely appreciate you taking the time.</p>
-      <p style="margin-top: 12px; color: var(--accent); font-size: 13px; letter-spacing: 1px;">Keep the pulse alive. 💜</p>
-      <button class="reset-btn" onclick="resetForm()">SEND ANOTHER</button>
-    </div>
+  <!-- SUCCESS -->
+  <div class="success-panel" id="successPanel">
+    <div class="success-icon">🎉</div>
+    <h2>THANK YOU!</h2>
+    <p>Your feedback has been received.<br>We read every message and genuinely appreciate you taking the time.</p>
+    <p style="margin-top: 12px; color: var(--accent); font-size: 13px; letter-spacing: 1px;">Keep the pulse alive. 💜
+    </p>
+    <button class="reset-btn" onclick="resetForm()">SEND ANOTHER</button>
+  </div>
 
   </div><!-- /page-wrap -->
 
   <div id="toast"></div>
 
 </body>
+
 </html>

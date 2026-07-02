@@ -1,4 +1,3 @@
-//<script>
 /* ── AUDIO REGISTRY ── */
 const audioMap = new Map(); // player el → Audio obj
 
@@ -222,4 +221,3 @@ function filterTracks() {
   document.getElementById('resultHeading').textContent = n + (n===1?' Track':' Tracks') + ' on Neon Pulse';
   document.getElementById('noResults').style.display = n===0 ? '' : 'none';
 }
-// </script>

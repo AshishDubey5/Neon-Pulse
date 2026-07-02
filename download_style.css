@@ -251,3 +251,84 @@ body {
       .dl-meta { display: none; }
       .stats-row { display: none; }
     }
+    /* ── COMING SOON (download page) ── */
+    .coming-soon-card {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 64px 24px;
+      text-align: center;
+    }
+    .cs-eyebrow {
+      font-family: 'Orbitron', monospace;
+      letter-spacing: 2px;
+      font-size: 11px;
+      color: var(--accent);
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    .cs-title {
+      font-family: 'Orbitron', monospace;
+      font-size: 32px;
+      color: white;
+      margin-bottom: 16px;
+      font-weight: 900;
+    }
+    .cs-body {
+      color: rgba(255,255,255,0.55);
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 36px;
+    }
+    .cs-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 380px;
+      margin: 0 auto;
+    }
+    .cs-input {
+      border-radius: 50px;
+      padding: 11px 18px;
+      background: rgba(167,139,250,0.08);
+      border: 1px solid rgba(167,139,250,0.3);
+      color: white;
+      font-size: 14px;
+      width: 100%;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .cs-input::placeholder { color: rgba(255,255,255,0.3); }
+    .cs-input:focus { border-color: var(--accent); box-shadow: 0 0 12px var(--accent-glow); }
+    .cs-btn {
+      padding: 11px 20px;
+      background: var(--accent);
+      border: none;
+      border-radius: 50px;
+      color: #1a0033;
+      font-weight: 900;
+      font-size: 12px;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: box-shadow 0.2s, transform 0.1s;
+      text-transform: uppercase;
+    }
+    .cs-btn:hover { box-shadow: 0 0 16px var(--accent-glow); transform: scale(1.03); }
+    .cs-success {
+      color: #4dffb8;
+      font-size: 13px;
+      margin-top: 16px;
+      display: none;
+    }
+    .cs-footnote {
+      color: rgba(255,255,255,0.32);
+      font-size: 12px;
+      margin-top: 48px;
+    }
+    .cs-footnote a { color: var(--accent); text-decoration: none; }
+    .cs-footnote a:hover { text-decoration: underline; }
+    .sr-only {
+      position: absolute;
+      width: 1px; height: 1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+    }

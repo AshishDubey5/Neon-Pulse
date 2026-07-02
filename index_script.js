@@ -80,46 +80,49 @@
     }
 
     // ── Mini player (simulated — replace with real Audio src) ──
-    let isPlaying = false;
-    let progress = 0;
-    let interval = null;
-    const DURATION = 225; // 3:45 in seconds (demo)
 
-    function togglePlay() {
-        isPlaying = !isPlaying;
-        const bars = document.querySelectorAll('.waveform-bar');
-        const playIcon = document.getElementById('playIcon');
+    // commented these for player 
+    
+    // let isPlaying = false;
+    // let progress = 0;
+    // let interval = null;
+    // const DURATION = 225; // 3:45 in seconds (demo)
 
-        if (isPlaying) {
-            bars.forEach(b => b.classList.remove('paused'));
-            playIcon.innerHTML = '<rect x="6" y="4" width="4" height="16" fill="white"/><rect x="14" y="4" width="4" height="16" fill="white"/>';
-            interval = setInterval(() => {
-                progress = Math.min(progress + (100 / DURATION), 100);
-                document.getElementById('progressFill').style.width = progress + '%';
-                const elapsed = Math.floor(DURATION * progress / 100);
-                const m = Math.floor(elapsed / 60);
-                const s = String(elapsed % 60).padStart(2, '0');
-                document.getElementById('timeDisplay').textContent = `${m}:${s} / 3:45`;
-                if (progress >= 100) { clearInterval(interval); isPlaying = false; progress = 0; bars.forEach(b => b.classList.add('paused')); playIcon.innerHTML = '<path d="M8 5v14l11-7z"/>'; }
-            }, 1000);
-        } else {
-            bars.forEach(b => b.classList.add('paused'));
-            playIcon.innerHTML = '<path d="M8 5v14l11-7z"/>';
-            clearInterval(interval);
-        }
-    }
+    // function togglePlay() {
+    //     isPlaying = !isPlaying;
+    //     const bars = document.querySelectorAll('.waveform-bar');
+    //     const playIcon = document.getElementById('playIcon');
 
-    function seekTrack(e) {
-        const bar = e.currentTarget;
-        const rect = bar.getBoundingClientRect();
-        const pct = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
-        progress = pct * 100;
-        document.getElementById('progressFill').style.width = progress + '%';
-        const elapsed = Math.floor(DURATION * pct);
-        const m = Math.floor(elapsed / 60);
-        const s = String(elapsed % 60).padStart(2, '0');
-        document.getElementById('timeDisplay').textContent = `${m}:${s} / 3:45`;
-    }
+    //     if (isPlaying) {
+    //         bars.forEach(b => b.classList.remove('paused'));
+    //         playIcon.innerHTML = '<rect x="6" y="4" width="4" height="16" fill="white"/><rect x="14" y="4" width="4" height="16" fill="white"/>';
+    //         interval = setInterval(() => {
+    //             progress = Math.min(progress + (100 / DURATION), 100);
+    //             document.getElementById('progressFill').style.width = progress + '%';
+    //             const elapsed = Math.floor(DURATION * progress / 100);
+    //             const m = Math.floor(elapsed / 60);
+    //             const s = String(elapsed % 60).padStart(2, '0');
+    //             document.getElementById('timeDisplay').textContent = `${m}:${s} / 3:45`;
+    //             if (progress >= 100) { clearInterval(interval); isPlaying = false; progress = 0; bars.forEach(b => b.classList.add('paused')); playIcon.innerHTML = '<path d="M8 5v14l11-7z"/>'; }
+    //         }, 1000);
+    //     } else {
+    //         bars.forEach(b => b.classList.add('paused'));
+    //         playIcon.innerHTML = '<path d="M8 5v14l11-7z"/>';
+    //         clearInterval(interval);
+    //     }
+    // }
+
+    // function seekTrack(e) {
+    //     const bar = e.currentTarget;
+    //     const rect = bar.getBoundingClientRect();
+    //     const pct = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+    //     progress = pct * 100;
+    //     document.getElementById('progressFill').style.width = progress + '%';
+    //     const elapsed = Math.floor(DURATION * pct);
+    //     const m = Math.floor(elapsed / 60);
+    //     const s = String(elapsed % 60).padStart(2, '0');
+    //     document.getElementById('timeDisplay').textContent = `${m}:${s} / 3:45`;
+    // }
 
     // ── Newsletter ──
     function subscribeNewsletter() {
