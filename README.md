@@ -21,7 +21,7 @@ Neon Pulse is a music download and music streaming platform for discovering, lis
 
 ## Live Website
 
-https://neonpulss.netlify.app
+https://neonpulsemusics.netlify.app
 
 ## Run Locally
 
