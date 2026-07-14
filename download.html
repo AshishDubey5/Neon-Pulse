@@ -1,19 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- ═══ SEO: Core Meta ═══ -->
   <title>Neon Pulse - Free Music & Sound Effects Downloads - COMING SOON</title>
-  <meta name="description" content="Neon Pulse's free download library — royalty-free background music and sound effects — is launching soon. Sign up to get notified the moment it's live.">
-  <meta name="keywords" content="free music download, free sound effects, royalty free music, background music, neon pulse">
+  <meta name="description"
+    content="Neon Pulse's free download library — royalty-free background music and sound effects — is launching soon. Sign up to get notified the moment it's live.">
+  <meta name="keywords"
+    content="free music download, free sound effects, royalty free music, background music, neon pulse">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Neon Pulse">
   <link rel="canonical" href="https://neonpulsemusics.netlify.app/download.html">
 
+  <!-- Open Graph -->
+  <meta property="og:title" content="Neon Pulse – Free Downloads (Coming Soon)">
+  <meta property="og:description"
+    content="Neon Pulse's free download library is launching soon. Sign up to get notified the moment it's live.">
+  <meta property="og:image" content="https://neonpulsemusics.netlify.app/assets/images/og-image.png">
+  <meta property="og:url" content="https://neonpulsemusics.netlify.app/download.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Neon Pulse">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Neon Pulse – Free Downloads (Coming Soon)">
+  <meta name="twitter:description"
+    content="Neon Pulse's free download library is launching soon. Sign up to get notified.">
+  <meta name="twitter:image" content="https://neonpulsemusics.netlify.app/assets/images/og-image.png">
+
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
 
   <!-- js => nav bar -->
   <script src="js/nav_bar.js"></script>
@@ -24,82 +44,83 @@
   <link rel="stylesheet" href="css/download_search.css">
 
 </head>
+
 <body>
 
-<!-- NAV -->
+  <!-- NAV -->
 
-<!-- FILTER BAR (preview only, disabled until library is live) -->
-<div class="filter-bar" aria-disabled="true" style="opacity:0.5;pointer-events:none;">
-  <div class="search-row">
-    <div class="search-wrap">
-      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
-      <input class="search-input" type="text" placeholder="Search sounds, moods, tags…" disabled />
+  <!-- FILTER BAR (preview only, disabled until library is live) -->
+  <div class="filter-bar" aria-disabled="true" style="opacity:0.5;pointer-events:none;">
+    <div class="search-row">
+      <div class="search-wrap">
+        <svg viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="7" />
+          <line x1="16.5" y1="16.5" x2="22" y2="22" />
+        </svg>
+        <input class="search-input" type="text" placeholder="Search sounds, moods, tags…" disabled />
+      </div>
+      <button class="search-btn" disabled>SEARCH</button>
     </div>
-    <button class="search-btn" disabled>SEARCH</button>
-  </div>
-  <div class="filter-row">
-    <span class="filter-label">Filter:</span>
-    <div class="filter-pill"><select disabled><option>Type</option></select></div>
-    <div class="filter-pill"><select disabled><option>Mood</option></select></div>
-    <div class="filter-pill"><select disabled><option>Duration</option></select></div>
-    <div class="filter-pill"><select disabled><option>Format</option></select></div>
-  </div>
-</div>
-
-<!-- COMING SOON STATE -->
-<div class="container">
-  <div class="coming-soon-card">
-    <p class="cs-eyebrow">LIBRARY — COMING SOON</p>
-    <h1 class="cs-title">Free Downloads Are On The Way</h1>
-    <p class="cs-body">
-      We're building a library of free, royalty-free background music and sound effects —
-      searchable by mood, type, and duration, just like the filters above. Nothing's live yet,
-      so there's nothing here to download right now. Leave your email and we'll let you know
-      the moment the first tracks drop.
-    </p>
-
-
-
-    <!-- News letter -->
-    <div class="cs-form">
-     <form
-    class="cs-form"
-    action="https://formspree.io/f/xykqbgyl"
-    method="POST">
-
-    <label for="newsletterEmail" class="sr-only">
-        Your email address
-    </label>
-
-    <input
-        type="email"
-        id="newsletterEmail"
-        name="email"
-        class="cs-input"
-        placeholder="your@email.com"
-        autocomplete="email"
-        required>
-
-    <input
-        type="hidden"
-        name="_subject"
-        value="New Neon Pulse Newsletter Subscriber">
-
-    <button type="submit" class="cs-btn">
-        NOTIFY ME
-    </button>
-
-</form>
+    <div class="filter-row">
+      <span class="filter-label">Filter:</span>
+      <div class="filter-pill"><select disabled>
+          <option>Type</option>
+        </select></div>
+      <div class="filter-pill"><select disabled>
+          <option>Mood</option>
+        </select></div>
+      <div class="filter-pill"><select disabled>
+          <option>Duration</option>
+        </select></div>
+      <div class="filter-pill"><select disabled>
+          <option>Format</option>
+        </select></div>
     </div>
-    <p id="subscribeMsg" class="cs-success">✓ You're on the list!</p>
-
-
-    <p class="cs-footnote">
-      In the meantime, check out the <a href="music.html">music page</a> to stream what's already live.
-    </p>
   </div>
-</div>
 
-<div id="toast"></div>
+  <!-- COMING SOON STATE -->
+  <div class="container">
+    <div class="coming-soon-card">
+      <p class="cs-eyebrow">LIBRARY — COMING SOON</p>
+      <h1 class="cs-title">Free Downloads Are On The Way</h1>
+      <p class="cs-body">
+        We're building a library of free, royalty-free background music and sound effects —
+        searchable by mood, type, and duration, just like the filters above. Nothing's live yet,
+        so there's nothing here to download right now. Leave your email and we'll let you know
+        the moment the first tracks drop.
+      </p>
+
+
+
+      <!-- News letter -->
+      <div class="cs-form">
+        <form class="cs-form" action="https://formspree.io/f/xykqbgyl" method="POST">
+
+          <label for="newsletterEmail" class="sr-only">
+            Your email address
+          </label>
+
+          <input type="email" id="newsletterEmail" name="email" class="cs-input" placeholder="your@email.com"
+            autocomplete="email" required>
+
+          <input type="hidden" name="_subject" value="New Neon Pulse Newsletter Subscriber">
+
+          <button type="submit" class="cs-btn">
+            NOTIFY ME
+          </button>
+
+        </form>
+      </div>
+      <p id="subscribeMsg" class="cs-success">✓ You're on the list!</p>
+
+
+      <p class="cs-footnote">
+        In the meantime, check out the <a href="music.html">music page</a> to stream what's already live.
+      </p>
+    </div>
+  </div>
+
+  <div id="toast"></div>
 </body>
+
 </html>
